@@ -26,6 +26,17 @@ body {
   line-height: 1.6;
 }
 
+.brand,
+.hero h1,
+.hero h2,
+.hero h3,
+.section h1,
+.section h2,
+.section h3,
+.footer h2 {
+  font-family: 'Flores Del Sol', cursive;
+}
+
 img {
   display: block;
   width: 100%;
@@ -71,8 +82,8 @@ a {
 }
 
 .brand {
-  font-weight: 800;
-  font-size: 1.1rem;
+  font-weight: 700;
+  font-size: 1.2rem;
   letter-spacing: 0.04em;
   color: var(--accent);
 }
@@ -290,19 +301,25 @@ h2 {
   margin-bottom: 0.8rem;
 }
 
-.testimonial {
-  padding: 2rem;
-  text-align: center;
+.review-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1rem;
+  margin-top: 2rem;
 }
 
-blockquote {
-  font-size: 1.2rem;
-  margin: 0 0 1rem;
+.review-card {
+  padding: 1.3rem;
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.85);
+  border: 1px solid var(--border);
+  box-shadow: 0 12px 30px rgba(76, 58, 38, 0.08);
 }
 
-.author {
-  color: var(--accent);
-  font-weight: 600;
+.review-card p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 1rem;
 }
 
 .footer {
@@ -323,7 +340,8 @@ blockquote {
   .two-col,
   .steps-grid,
   .cards-grid,
-  .gallery-grid {
+  .gallery-grid,
+  .review-grid {
     grid-template-columns: 1fr;
   }
 
