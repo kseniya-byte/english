@@ -1,13 +1,13 @@
 :root {
-  --bg: #fff7fb;
-  --bg-deep: #ffe9f4;
+  --bg: #f8f7f3;
+  --bg-deep: #efe9de;
   --surface: #ffffff;
-  --text: #341d3b;
-  --muted: #755e76;
-  --accent: #ff6fa6;
-  --accent-2: #8b5cf6;
-  --accent-soft: #ffd7eb;
-  --border: rgba(140, 73, 129, 0.16);
+  --text: #2e2722;
+  --muted: #6d6258;
+  --accent: #7c5d3c;
+  --accent-2: #4e6a5a;
+  --accent-soft: #f2e8dc;
+  --border: rgba(76, 58, 38, 0.14);
 }
 
 * {
@@ -24,6 +24,12 @@ body {
   color: var(--text);
   background: linear-gradient(135deg, var(--bg), var(--bg-deep));
   line-height: 1.6;
+}
+
+img {
+  display: block;
+  width: 100%;
+  object-fit: cover;
 }
 
 img {
@@ -53,7 +59,7 @@ a {
   inset: -20% auto auto -10%;
   width: 320px;
   height: 320px;
-  background: radial-gradient(circle, rgba(255, 111, 166, 0.25), transparent 70%);
+  background: radial-gradient(circle, rgba(124, 93, 60, 0.16), transparent 70%);
   filter: blur(30px);
 }
 
@@ -172,17 +178,13 @@ h2 {
 }
 
 .avatar {
-  width: 84px;
-  height: 84px;
+  width: 120px;
+  height: 120px;
   margin: 0 auto 1rem;
   border-radius: 50%;
-  background: linear-gradient(135deg, var(--accent), var(--accent-2));
-  color: white;
-  display: grid;
-  place-items: center;
-  font-size: 1.8rem;
-  font-weight: 800;
-  box-shadow: 0 12px 24px rgba(255, 111, 166, 0.25);
+  object-fit: cover;
+  border: 4px solid var(--accent-soft);
+  box-shadow: 0 12px 24px rgba(76, 58, 38, 0.16);
 }
 
 .metric {
@@ -208,7 +210,44 @@ h2 {
 }
 
 .section-accent {
-  background: rgba(255, 255, 255, 0.4);
+  background: rgba(255, 255, 255, 0.45);
+}
+
+.section-gallery {
+  padding-top: 3rem;
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1.2rem;
+  margin-top: 2rem;
+}
+
+.photo-card {
+  overflow: hidden;
+  border-radius: 24px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  box-shadow: 0 18px 40px rgba(76, 58, 38, 0.08);
+}
+
+.photo-card img {
+  height: 240px;
+}
+
+.photo-caption {
+  padding: 1rem 1rem 1.2rem;
+}
+
+.photo-caption h3 {
+  color: var(--accent);
+  margin-bottom: 0.4rem;
+}
+
+.photo-caption p {
+  margin: 0;
+  color: var(--muted);
 }
 
 .two-col {
@@ -283,7 +322,8 @@ blockquote {
   .hero-grid,
   .two-col,
   .steps-grid,
-  .cards-grid {
+  .cards-grid,
+  .gallery-grid {
     grid-template-columns: 1fr;
   }
 
